@@ -1,0 +1,2928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ================================================================
+         META & SEO CONFIGURATION
+         ================================================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moe Kyaw Aung - Senior Android Developer | 12+ years experience | Kotlin | Jetpack | Clean Architecture">
+    <meta name="keywords" content="Android Developer, Kotlin, Jetpack, Firebase, Mobile Apps, Myanmar Developer">
+    <meta name="author" content="Moe Kyaw Aung">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:title" content="Moe Kyaw Aung - Senior Android Developer">
+    <meta property="og:description" content="Explore my portfolio of Android apps, certificates, and projects built with Kotlin & Clean Architecture">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://res.cloudinary.com/dye5qpwii/image/upload/v1778527878/IMG_20260430_053105_uef0yr.png">
+    
+    <title>⭐ Moe Kyaw Aung - Senior Android Developer Portfolio V129</title>
+    
+    <!-- ================================================================
+         STYLESHEETS & FONTS
+         ================================================================ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Mono:wght@400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ================================================================
+           CSS CUSTOM PROPERTIES (Variables)
+           ================================================================ */
+        :root {
+            /* Terminal/Hacker Colors */
+            --primary-dark: #0a0a0a;
+            --secondary-dark: #1a1a1a;
+            --tertiary-dark: #2a2a2a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --border-color: #2a2a2a;
+            --accent-cyan: #00d4ff;
+            --accent-pink: #ff006e;
+            --accent-gold: #ffd60a;
+            --accent-green: #06ffa5;
+            
+            /* Fonts */
+            --font-mono: 'JetBrains Mono', 'Courier Prime', monospace;
+            --font-code: 'Space Mono', monospace;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            
+            /* Timing */
+            --transition-fast: 0.2s ease-in-out;
+            --transition-smooth: 0.4s ease-in-out;
+            --transition-slow: 0.6s ease-in-out;
+        }
+
+        /* Dark mode by default */
+        [data-theme="light"] {
+            --primary-dark: #ffffff;
+            --secondary-dark: #f5f5f5;
+            --tertiary-dark: #e8e8e8;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --border-color: #d0d0d0;
+        }
+
+        /* ================================================================
+           GLOBAL STYLES & RESETS
+           ================================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: var(--font-mono);
+            background-color: var(--primary-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 1rem;
+            overflow-x: hidden;
+            transition: background-color var(--transition-smooth), color var(--transition-smooth);
+        }
+
+        /* Remove scrollbar styling for consistency */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--secondary-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-cyan);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-pink);
+        }
+
+        /* Custom cursor */
+        body {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="4" fill="%2300d4ff"/><circle cx="16" cy="16" r="8" fill="none" stroke="%2300d4ff" stroke-width="1"/></svg>') 16 16, auto;
+        }
+
+        a {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6" fill="%23ff006e"/></svg>') 16 16, pointer;
+        }
+
+        /* ================================================================
+           TYPOGRAPHY
+           ================================================================ */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-code);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
+        h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+        h3 { font-size: clamp(1.4rem, 4vw, 2rem); }
+        h4 { font-size: 1.3rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+
+        p {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* ================================================================
+           NAVIGATION BAR
+           ================================================================ */
+        .navbar {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .navbar-brand {
+            font-family: var(--font-code);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent-cyan) !important;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: all var(--transition-smooth);
+        }
+
+        .navbar-brand:hover {
+            color: var(--accent-pink) !important;
+            text-shadow: 0 0 10px var(--accent-cyan);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-secondary) !important;
+            font-size: 0.95rem;
+            margin: 0 1rem;
+            position: relative;
+            transition: color var(--transition-smooth);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-cyan);
+            transition: width var(--transition-smooth);
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-cyan) !important;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggler {
+            border: none;
+            color: var(--accent-cyan) !important;
+            transition: all var(--transition-smooth);
+        }
+
+        .nav-toggler:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 212, 255, 0.25);
+        }
+
+        /* ================================================================
+           THEME TOGGLE & CONTROLS
+           ================================================================ */
+        .navbar-end-controls {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            font-size: 1.2rem;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(0, 212, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-cyan);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            font-size: 1.5rem;
+            transition: all var(--transition-smooth);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.6);
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        /* ================================================================
+           HERO SECTION
+           ================================================================ */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 60px;
+            padding: 2rem;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 110, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--accent-pink);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+            letter-spacing: 0.03em;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: var(--text-secondary);
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+            line-height: 1.8;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-box {
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: rgba(0, 212, 255, 0.02);
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+            transition: all var(--transition-smooth);
+        }
+
+        .stat-box:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.05);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            font-family: var(--font-code);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        /* ================================================================
+           BUTTONS
+           ================================================================ */
+        .btn-primary, .btn-secondary, .btn-tertiary {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-cyan);
+            color: var(--primary-dark);
+            border: 2px solid var(--accent-cyan);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--accent-cyan);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-pink);
+            border: 2px solid var(--accent-pink);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-pink);
+            color: var(--primary-dark);
+            box-shadow: 0 0 30px rgba(255, 0, 110, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .btn-tertiary {
+            background: transparent;
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .btn-tertiary:hover {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            box-shadow: 0 0 30px rgba(255, 214, 10, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* ================================================================
+           SECTION STYLING
+           ================================================================ */
+        .section {
+            padding: 5rem 5%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+            margin: 3rem 0;
+        }
+
+        .section-label {
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        .section-title .accent {
+            color: var(--accent-cyan);
+        }
+
+        /* ================================================================
+           ABOUT SECTION
+           ================================================================ */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .info-item {
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: rgba(0, 212, 255, 0.02);
+            transition: all var(--transition-smooth);
+        }
+
+        .info-item:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .info-value {
+            font-size: 1.2rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        /* ================================================================
+           SKILLS SECTION
+           ================================================================ */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: rgba(0, 212, 255, 0.02);
+            transition: all var(--transition-smooth);
+        }
+
+        .skill-category:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15);
+        }
+
+        .skill-category-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-pink);
+            font-weight: 600;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        .skill-tag {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent-cyan);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid var(--accent-cyan);
+            transition: all var(--transition-smooth);
+            white-space: nowrap;
+        }
+
+        .skill-tag:hover {
+            background: var(--accent-cyan);
+            color: var(--primary-dark);
+        }
+
+        /* ================================================================
+           TIMELINE/EXPERIENCE SECTION
+           ================================================================ */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-pink));
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--accent-cyan);
+            border: 3px solid var(--primary-dark);
+            border-radius: 50%;
+        }
+
+        .timeline-content {
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: rgba(0, 212, 255, 0.02);
+            transition: all var(--transition-smooth);
+        }
+
+        .timeline-content:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+        }
+
+        .timeline-year {
+            color: var(--accent-cyan);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ================================================================
+           CERTIFICATES SECTION
+           ================================================================ */
+        .cert-search-wrap {
+            position: relative;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .cert-search-wrap::before {
+            content: '🔍';
+            position: absolute;
+            left: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .cert-search {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            background: var(--secondary-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            transition: all var(--transition-smooth);
+        }
+
+        .cert-search:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .cert-filter {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            padding: 0.7rem 1.2rem;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            transition: all var(--transition-smooth);
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .cert-card {
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: rgba(0, 212, 255, 0.02);
+            transition: all var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink), var(--accent-gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition-smooth);
+        }
+
+        .cert-card:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .cert-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cert-title {
+            color: var(--accent-cyan);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-date {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-id {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            font-family: var(--font-code);
+            margin-bottom: 1rem;
+            word-break: break-all;
+        }
+
+        .cert-verify {
+            display: inline-block;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all var(--transition-smooth);
+            font-weight: 600;
+        }
+
+        .cert-verify:hover {
+            color: var(--accent-pink);
+        }
+
+        /* ================================================================
+           APPS/PROJECTS SECTION
+           ================================================================ */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .app-card {
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: rgba(0, 212, 255, 0.02);
+            transition: all var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 0, 110, 0.1));
+            transition: top var(--transition-smooth);
+            z-index: 0;
+        }
+
+        .app-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 212, 255, 0.2);
+        }
+
+        .app-card:hover::before {
+            top: 0;
+        }
+
+        .app-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .app-name {
+            color: var(--accent-cyan);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .app-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .app-link {
+            color: var(--accent-pink);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-smooth);
+            position: relative;
+            z-index: 1;
+        }
+
+        .app-link:hover {
+            color: var(--accent-cyan);
+            text-decoration: underline;
+        }
+
+        /* ================================================================
+           GITHUB ACCOUNTS SECTION
+           ================================================================ */
+        .github-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .github-card {
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: rgba(0, 212, 255, 0.02);
+            text-align: center;
+            transition: all var(--transition-smooth);
+        }
+
+        .github-card:hover {
+            border-color: var(--accent-pink);
+            background: rgba(255, 0, 110, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .github-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .github-username {
+            color: var(--accent-pink);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .github-link {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all var(--transition-smooth);
+        }
+
+        .github-link:hover {
+            color: var(--accent-gold);
+        }
+
+        /* ================================================================
+           FEATURES SECTION
+           ================================================================ */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: rgba(0, 212, 255, 0.02);
+            transition: all var(--transition-smooth);
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .feature-title {
+            color: var(--accent-cyan);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ================================================================
+           STATISTICS/COUNTER SECTION
+           ================================================================ */
+        .stats-section {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+        }
+
+        .stat-number-large {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label-large {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ================================================================
+           TESTIMONIALS/SOCIAL SECTION
+           ================================================================ */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: rgba(0, 212, 255, 0.02);
+            transition: all var(--transition-smooth);
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--accent-pink);
+            background: rgba(255, 0, 110, 0.05);
+        }
+
+        .testimonial-text {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .testimonial-role {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* ================================================================
+           PRICING SECTION
+           ================================================================ */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            padding: 2.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            background: rgba(0, 212, 255, 0.02);
+            transition: all var(--transition-smooth);
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent-cyan);
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .pricing-title {
+            color: var(--accent-cyan);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-pink);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-period {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* ================================================================
+           FAQ SECTION
+           ================================================================ */
+        .faq-container {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all var(--transition-smooth);
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: rgba(0, 212, 255, 0.02);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all var(--transition-smooth);
+        }
+
+        .faq-question:hover {
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        .faq-q-text {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .faq-toggle {
+            color: var(--accent-cyan);
+            font-size: 1.5rem;
+            transition: transform var(--transition-smooth);
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-smooth);
+            background: var(--secondary-dark);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-a-text {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* ================================================================
+           CONTACT SECTION
+           ================================================================ */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-block {
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: rgba(0, 212, 255, 0.02);
+        }
+
+        .contact-block-title {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-block-value {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .contact-block-value a {
+            color: var(--accent-pink);
+            text-decoration: none;
+            transition: color var(--transition-smooth);
+        }
+
+        .contact-block-value a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: all var(--transition-smooth);
+            font-size: 1.2rem;
+        }
+
+        .social-icon:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .form-control {
+            padding: 1rem;
+            background: var(--secondary-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            transition: all var(--transition-smooth);
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-submit {
+            padding: 1rem 2rem;
+            background: var(--accent-cyan);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            font-size: 1rem;
+        }
+
+        .form-submit:hover {
+            background: var(--accent-pink);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* ================================================================
+           FOOTER
+           ================================================================ */
+        footer {
+            background: var(--secondary-dark);
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 5% 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            max-width: 1280px;
+            margin: 0 auto 2rem;
+        }
+
+        .footer-section-title {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.7rem;
+            transition: color var(--transition-smooth);
+        }
+
+        .footer-link:hover {
+            color: var(--accent-cyan);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-credit {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-credit a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        /* ================================================================
+           ANIMATIONS
+           ================================================================ */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+            }
+        }
+
+        /* Scroll reveal animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================================================================
+           RESPONSIVE DESIGN
+           ================================================================ */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .section {
+                padding: 3rem 5%;
+            }
+
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary, .btn-tertiary {
+                width: 100%;
+            }
+
+            .navbar-end-controls {
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .cert-filter {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.75rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid, .apps-grid, .github-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item::before {
+                left: -1.25rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .faq-container {
+                max-width: 100%;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 0.95rem;
+            }
+
+            .section {
+                padding: 2rem 3%;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .navbar-brand {
+                font-size: 1rem;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 0 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-box {
+                padding: 1rem;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+
+        /* ================================================================
+           ACCESSIBILITY
+           ================================================================ */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus styles for keyboard navigation */
+        *:focus-visible {
+            outline: 2px solid var(--accent-cyan);
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: more) {
+            .btn-primary, .btn-secondary, .btn-tertiary {
+                font-weight: 700;
+            }
+
+            .accent-cyan {
+                font-weight: 700;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ================================================================
+         LOADING ANIMATION / PRELOADER
+         ================================================================ -->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">⭐</div>
+            <div style="font-family: var(--font-code); font-size: 1.2rem; letter-spacing: 0.05em;">
+                LOADING<span class="loader-dots" style="display: inline-block; width: 1rem;"><span>.</span><span>.</span><span>.</span></span>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.6s ease-out;
+            pointer-events: auto;
+        }
+
+        .preloader.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content {
+            text-align: center;
+            color: var(--accent-cyan);
+        }
+
+        @keyframes blink {
+            0%, 20%, 50%, 80%, 100% { opacity: 1; }
+            40% { opacity: 0.3; }
+            60% { opacity: 0.6; }
+        }
+
+        .loader-dots span {
+            animation: blink 1.4s infinite;
+        }
+
+        .loader-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loader-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+    </style>
+
+    <!-- ================================================================
+         NAVIGATION BAR
+         ================================================================ -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid" style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
+            <a class="navbar-brand" href="#home">
+                ⭐ MOE-KYAW-AUNG
+            </a>
+            
+            <button class="navbar-toggler nav-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#apps">Apps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-end-controls ms-3">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================================================================
+         HERO SECTION
+         ================================================================ -->
+    <section class="hero-section" id="home">
+        <canvas id="particleCanvas" class="hero-canvas"></canvas>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">⭐ MOE KYAW AUNG</h1>
+            <p class="hero-subtitle">SENIOR ANDROID DEVELOPER | KOTLIN SPECIALIST</p>
+            <p class="hero-description">
+                Building secure, scalable, and user-friendly mobile applications with 12+ years of hands-on experience in Kotlin, Jetpack, Firebase, and Clean Architecture. Passionate about clean code, modern practices, and problem-solving.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Projects Built</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">122+</div>
+                    <div class="stat-label">Repositories</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Hire Me Now</a>
+                <a href="#apps" class="btn-secondary">View My Work</a>
+                <a href="https://github.com/Dev-moe-kyawaung" target="_blank" class="btn-tertiary">GitHub Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         ABOUT SECTION
+         ================================================================ -->
+    <section class="section" id="about">
+        <span class="section-label fade-up">About Me</span>
+        <h2 class="section-title fade-up">Developer by passion, <span class="accent">learner by nature</span></h2>
+
+        <div class="about-grid">
+            <div class="about-text">
+                <p class="fade-up">
+                    I am a passionate and self-motivated developer who believes in continuous learning and growth. From mobile apps to backend systems, databases to AI — I consistently expand my skill set across the full technology spectrum.
+                </p>
+                <p class="fade-up">
+                    My certification portfolio demonstrates practical, structured learning across 9 major domains and over 100+ technical subjects. I build with intention: clean code, modern practices, and a genuine love for problem-solving.
+                </p>
+                <p class="fade-up">
+                    Based in Myanmar with connections to Bangkok, Thailand. Actively contributing to the developer community and supporting Myanmar nationals in tech spaces globally.
+                </p>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item fade-up">
+                    <span class="info-label">Full Name</span>
+                    <span class="info-value">Moe Kyaw Aung</span>
+                </div>
+                <div class="info-item fade-up">
+                    <span class="info-label">Location</span>
+                    <span class="info-value">Myanmar / Thailand</span>
+                </div>
+                <div class="info-item fade-up">
+                    <span class="info-label">Certificates</span>
+                    <span class="info-value">100+ (Programming Hub)</span>
+                </div>
+                <div class="info-item fade-up">
+                    <span class="info-label">Status</span>
+                    <span class="info-value" style="color: var(--accent-green);">🟢 Open to Work</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         EXPERIENCE / TIMELINE SECTION
+         ================================================================ -->
+    <section class="section" id="experience">
+        <span class="section-label fade-up">Work Experience</span>
+        <h2 class="section-title fade-up">Professional <span class="accent">Timeline</span></h2>
+
+        <div class="timeline" style="max-width: 800px; margin: 0 auto;">
+            <div class="timeline-item fade-up">
+                <div class="timeline-content">
+                    <div class="timeline-year">2024 - Present</div>
+                    <div class="timeline-title">Senior Android Developer @ Microsoft</div>
+                    <div class="timeline-description">
+                        Leading mobile app development initiatives using Kotlin, Jetpack Compose, and Clean Architecture. Managing CI/CD pipelines and mentoring junior developers.
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-up">
+                <div class="timeline-content">
+                    <div class="timeline-year">2020 - 2024</div>
+                    <div class="timeline-title">Full-Stack Developer</div>
+                    <div class="timeline-description">
+                        Built 50+ production mobile applications and 100+ web projects. Specialized in Kotlin/Android, React, Node.js, Firebase, and AWS services.
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-up">
+                <div class="timeline-content">
+                    <div class="timeline-year">2015 - 2020</div>
+                    <div class="timeline-title">Mobile App Developer</div>
+                    <div class="timeline-description">
+                        Developed native Android applications from scratch. Focused on performance optimization, security, and user experience across diverse platforms.
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-up">
+                <div class="timeline-content">
+                    <div class="timeline-year">2012 - 2015</div>
+                    <div class="timeline-title">Junior Developer</div>
+                    <div class="timeline-description">
+                        Started development journey with Java and Android fundamentals. Built foundation in software engineering best practices and architectural patterns.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         SKILLS SECTION
+         ================================================================ -->
+    <section class="section" id="skills">
+        <span class="section-label fade-up">Tech Stack</span>
+        <h2 class="section-title fade-up">Skills & <span class="accent">Technologies</span></h2>
+
+        <div class="skills-grid">
+            <div class="skill-category fade-up">
+                <div class="skill-category-title">🤖 Mobile Development</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Kotlin</span>
+                    <span class="skill-tag">Jetpack</span>
+                    <span class="skill-tag">Compose</span>
+                    <span class="skill-tag">Android</span>
+                    <span class="skill-tag">Flutter</span>
+                </div>
+            </div>
+
+            <div class="skill-category fade-up">
+                <div class="skill-category-title">⚛️ Frontend</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">Vue.js</span>
+                    <span class="skill-tag">Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="skill-category fade-up">
+                <div class="skill-category-title">☁️ Backend & Cloud</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">REST API</span>
+                </div>
+            </div>
+
+            <div class="skill-category fade-up">
+                <div class="skill-category-title">🗄️ Databases</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">Room DB</span>
+                </div>
+            </div>
+
+            <div class="skill-category fade-up">
+                <div class="skill-category-title">⚙️ DevOps & Tools</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">GitHub Actions</span>
+                    <span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Fastlane</span>
+                    <span class="skill-tag">Azure</span>
+                </div>
+            </div>
+
+            <div class="skill-category fade-up">
+                <div class="skill-category-title">🔐 Security & Testing</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">JUnit</span>
+                    <span class="skill-tag">Testing</span>
+                    <span class="skill-tag">Security</span>
+                    <span class="skill-tag">Encryption</span>
+                    <span class="skill-tag">Espresso</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         STATISTICS SECTION
+         ================================================================ -->
+    <section class="section">
+        <div class="stats-section fade-up">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number-large" data-target="12">0+</div>
+                    <div class="stat-label-large">Years of Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-large" data-target="100">0+</div>
+                    <div class="stat-label-large">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-large" data-target="122">0+</div>
+                    <div class="stat-label-large">GitHub Repositories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-large" data-target="100">0%</div>
+                    <div class="stat-label-large">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         APPS/PROJECTS SECTION
+         ================================================================ -->
+    <section class="section" id="apps">
+        <span class="section-label fade-up">Portfolio</span>
+        <h2 class="section-title fade-up">Featured <span class="accent">Apps & Projects</span></h2>
+
+        <div class="apps-grid">
+            <div class="app-card fade-up">
+                <div class="app-icon">📱</div>
+                <div class="app-name">Social Dashboard</div>
+                <div class="app-description">
+                    Real-time social media analytics platform with Firebase integration and live notifications. Built with Kotlin & Compose.
+                </div>
+                <a href="https://github.com/moekyawaung-tech/social-dashboard" target="_blank" class="app-link">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="app-card fade-up">
+                <div class="app-icon">🎮</div>
+                <div class="app-name">Game Collection</div>
+                <div class="app-description">
+                    Multi-genre game suite featuring classic games rebuilt with modern Android development practices and smooth animations.
+                </div>
+                <a href="https://github.com/moekyawaung-tech/game-collection" target="_blank" class="app-link">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="app-card fade-up">
+                <div class="app-icon">🎵</div>
+                <div class="app-name">Video Player Pro</div>
+                <div class="app-description">
+                    Advanced video player with custom controls, streaming support, and hardware acceleration. Full playback management.
+                </div>
+                <a href="https://github.com/moekyawaung-tech/video-player" target="_blank" class="app-link">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="app-card fade-up">
+                <div class="app-icon">💼</div>
+                <div class="app-name">Job Portal App</div>
+                <div class="app-description">
+                    Complete job marketplace platform with job search, applications, and user profiles. Multi-platform support with REST APIs.
+                </div>
+                <a href="https://github.com/moekyawaung-tech/Job-Portal-App" target="_blank" class="app-link">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="app-card fade-up">
+                <div class="app-icon">🛒</div>
+                <div class="app-name">POS System Pro</div>
+                <div class="app-description">
+                    Enterprise-level Point of Sale system with inventory management, reporting, and offline-first architecture.
+                </div>
+                <a href="https://github.com/moekyawaung-tech/POS-Ultimate-Pro-Max" target="_blank" class="app-link">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="app-card fade-up">
+                <div class="app-icon">☁️</div>
+                <div class="app-name">PWA Collection</div>
+                <div class="app-description">
+                    Progressive Web Apps with offline capabilities, service workers, and cross-platform synchronization built with React.
+                </div>
+                <a href="https://github.com/moekyawaung-tech/pwa-app" target="_blank" class="app-link">
+                    View on GitHub →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         FEATURES/CAPABILITIES SECTION
+         ================================================================ -->
+    <section class="section" id="features">
+        <span class="section-label fade-up">Why Choose Me</span>
+        <h2 class="section-title fade-up">Key <span class="accent">Capabilities</span></h2>
+
+        <div class="features-grid">
+            <div class="feature-card fade-up">
+                <div class="feature-icon">🏗️</div>
+                <div class="feature-title">Clean Architecture</div>
+                <div class="feature-description">
+                    Expert in implementing MVVM, MVI, and Clean Architecture patterns for maintainable, testable code.
+                </div>
+            </div>
+
+            <div class="feature-card fade-up">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Performance Optimization</div>
+                <div class="feature-description">
+                    Proven track record of optimizing app performance, reducing load times, and improving user experience.
+                </div>
+            </div>
+
+            <div class="feature-card fade-up">
+                <div class="feature-icon">🔐</div>
+                <div class="feature-title">Security First</div>
+                <div class="feature-description">
+                    Comprehensive security implementation including encryption, authentication, and secure data storage.
+                </div>
+            </div>
+
+            <div class="feature-card fade-up">
+                <div class="feature-icon">📚</div>
+                <div class="feature-title">Documentation</div>
+                <div class="feature-description">
+                    Writing clear, comprehensive documentation and READMEs for all projects for easy onboarding.
+                </div>
+            </div>
+
+            <div class="feature-card fade-up">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-title">CI/CD Pipeline</div>
+                <div class="feature-description">
+                    Setting up automated build, test, and deployment pipelines using GitHub Actions and Azure DevOps.
+                </div>
+            </div>
+
+            <div class="feature-card fade-up">
+                <div class="feature-icon">👥</div>
+                <div class="feature-title">Team Leadership</div>
+                <div class="feature-description">
+                    Mentoring junior developers, code review best practices, and fostering collaborative development environments.
+                </div>
+            </div>
+
+            <div class="feature-card fade-up">
+                <div class="feature-icon">🌍</div>
+                <div class="feature-title">Multilingual Support</div>
+                <div class="feature-description">
+                    Building apps with internationalization support, including full Myanmar language support with Burmese script.
+                </div>
+            </div>
+
+            <div class="feature-card fade-up">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Analytics & Monitoring</div>
+                <div class="feature-description">
+                    Integrating Firebase Analytics, Crashlytics, and custom monitoring for production app insights.
+                </div>
+            </div>
+
+            <div class="feature-card fade-up">
+                <div class="feature-icon">💬</div>
+                <div class="feature-title">Communication</div>
+                <div class="feature-description">
+                    Clear communication with stakeholders, agile methodology experience, and consistent progress updates.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         CERTIFICATES PREVIEW SECTION
+         ================================================================ -->
+    <section class="section" id="certificates">
+        <span class="section-label fade-up">Credentials</span>
+        <h2 class="section-title fade-up">Programming Hub <span class="accent">Certificates</span></h2>
+
+        <p style="color: var(--text-secondary); margin-bottom: 2rem; text-align: center;" class="fade-up">
+            100+ certifications across 9 major domains demonstrating expertise in programming languages, web development, mobile apps, databases, AI/ML, security, blockchain, software engineering, and business skills.
+        </p>
+
+        <div class="cert-filter fade-up">
+            <button class="filter-btn active">All (100+)</button>
+            <button class="filter-btn">⌨️ Programming (13)</button>
+            <button class="filter-btn">🌐 Web Dev (13)</button>
+            <button class="filter-btn">📱 Mobile (7)</button>
+            <button class="filter-btn">🗄️ Databases (6)</button>
+            <button class="filter-btn">🤖 AI/ML (11)</button>
+            <button class="filter-btn">🔐 Security (10)</button>
+            <button class="filter-btn">⛓️ Blockchain (4)</button>
+        </div>
+
+        <div class="cert-grid">
+            <div class="cert-card fade-up">
+                <div class="cert-title">C Programming</div>
+                <div class="cert-date">📅 Jul 4, 2024</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">Java Complete Course</div>
+                <div class="cert-date">📅 Aug 15, 2024</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">Python Advanced</div>
+                <div class="cert-date">📅 Sep 20, 2024</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">Web Development Bootcamp</div>
+                <div class="cert-date">📅 Oct 10, 2024</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">React Advanced Patterns</div>
+                <div class="cert-date">📅 Oct 25, 2024</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">Machine Learning Basics</div>
+                <div class="cert-date">📅 Nov 5, 2024</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">Cybersecurity Essentials</div>
+                <div class="cert-date">📅 Nov 20, 2024</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">Cloud Computing with AWS</div>
+                <div class="cert-date">📅 Dec 1, 2024</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">Docker & Kubernetes</div>
+                <div class="cert-date">📅 Dec 15, 2024</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">Mobile App Development</div>
+                <div class="cert-date">📅 Jan 10, 2025</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">Firebase Masterclass</div>
+                <div class="cert-date">📅 Jan 25, 2025</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+
+            <div class="cert-card fade-up">
+                <div class="cert-title">SQL Database Design</div>
+                <div class="cert-date">📅 Feb 5, 2025</div>
+                <a href="#" target="_blank" class="cert-verify">✓ Verify Certificate ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         GITHUB ACCOUNTS SECTION
+         ================================================================ -->
+    <section class="section">
+        <span class="section-label fade-up">Communities</span>
+        <h2 class="section-title fade-up">Multiple <span class="accent">GitHub Accounts</span></h2>
+
+        <p style="color: var(--text-secondary); margin-bottom: 2rem; text-align: center;" class="fade-up">
+            Maintaining 40+ specialized GitHub accounts across different niches and technologies. Each account focused on specific domains and technologies.
+        </p>
+
+        <div class="github-grid">
+            <div class="github-card fade-up">
+                <div class="github-icon">👨‍💻</div>
+                <div class="github-username">Dev-moe-kyawaung</div>
+                <a href="https://github.com/Dev-moe-kyawaung" target="_blank" class="github-link">Primary Account →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">☁️</div>
+                <div class="github-username">moekyawaung-cloud</div>
+                <a href="https://moekyawaung-cloud.github.io/" target="_blank" class="github-link">Cloud Projects →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">🔐</div>
+                <div class="github-username">Moekyawaung-cyber</div>
+                <a href="https://moekyawaung-cyber.github.io/" target="_blank" class="github-link">Security Focus →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">💼</div>
+                <div class="github-username">moekyawaung-tech</div>
+                <a href="https://moekyawaung-tech.github.io/" target="_blank" class="github-link">Tech Projects →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">🎨</div>
+                <div class="github-username">moekyawaung-designer</div>
+                <a href="https://moekyawaung-designer.github.io/" target="_blank" class="github-link">Design Work →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">🇲🇲</div>
+                <div class="github-username">Moe-kyaw-Aung-mm</div>
+                <a href="https://moe-kyaw-Aung-mm.github.io/" target="_blank" class="github-link">Myanmar Projects →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">🏢</div>
+                <div class="github-username">Moe-Kyaw-Aung-microsoft</div>
+                <a href="https://Moe-Kyaw-Aung-microsoft.github.io/" target="_blank" class="github-link">Enterprise →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">🌐</div>
+                <div class="github-username">moekyawaung-web</div>
+                <a href="https://moekyawaung-web.github.io/" target="_blank" class="github-link">Web Projects →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">📱</div>
+                <div class="github-username">moekyawaung-micro</div>
+                <a href="https://moekyawaung-micro.github.io/" target="_blank" class="github-link">Microservices →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">🇹🇭</div>
+                <div class="github-username">moekyawaung-bangkok</div>
+                <a href="https://moekyawaung-bangkok.github.io/" target="_blank" class="github-link">Bangkok Dev →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">🎓</div>
+                <div class="github-username">moekyawaung-graduate</div>
+                <a href="https://moekyawaung-graduate.github.io/" target="_blank" class="github-link">Education →</a>
+            </div>
+
+            <div class="github-card fade-up">
+                <div class="github-icon">💻</div>
+                <div class="github-username">Moekyawaung-coder</div>
+                <a href="https://Moekyawaung-coder.github.io/" target="_blank" class="github-link">Coding Focus →</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         TESTIMONIALS SECTION
+         ================================================================ -->
+    <section class="section">
+        <span class="section-label fade-up">Social Proof</span>
+        <h2 class="section-title fade-up">Client <span class="accent">Testimonials</span></h2>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-text">
+                    "Moe delivered an exceptional mobile app that exceeded all expectations. Professional, responsive, and truly understands modern development practices."
+                </div>
+                <div class="testimonial-author">Sarah Chen</div>
+                <div class="testimonial-role">Product Manager, Tech Startup</div>
+            </div>
+
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-text">
+                    "Working with Moe was a game-changer. The code quality is outstanding, and the CI/CD setup saved us months of development time."
+                </div>
+                <div class="testimonial-author">James Wilson</div>
+                <div class="testimonial-role">CTO, Enterprise Solutions</div>
+            </div>
+
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-text">
+                    "Exceptional attention to security and performance. Moe's expertise in Kotlin and Jetpack is evident in every line of code."
+                </div>
+                <div class="testimonial-author">Priya Sharma</div>
+                <div class="testimonial-role">Engineering Lead, Mobile Team</div>
+            </div>
+
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-text">
+                    "The documentation and code clarity made it easy for our team to maintain and extend the applications. Highly recommended!"
+                </div>
+                <div class="testimonial-author">Michael Park</div>
+                <div class="testimonial-role">Project Manager, Digital Agency</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         PRICING/SERVICES SECTION
+         ================================================================ -->
+    <section class="section">
+        <span class="section-label fade-up">Services</span>
+        <h2 class="section-title fade-up">Service <span class="accent">Packages</span></h2>
+
+        <div class="pricing-grid">
+            <div class="pricing-card fade-up">
+                <div class="pricing-title">Consultation</div>
+                <div class="pricing-price">$50</div>
+                <div class="pricing-period">Per Hour</div>
+                <ul class="pricing-features">
+                    <li>✓ Technical Architecture Review</li>
+                    <li>✓ Code Analysis</li>
+                    <li>✓ Best Practices Advice</li>
+                    <li>✓ Career Guidance</li>
+                </ul>
+                <button class="btn-primary">Book Now</button>
+            </div>
+
+            <div class="pricing-card featured fade-up">
+                <div class="pricing-badge">POPULAR</div>
+                <div class="pricing-title">Mobile App Development</div>
+                <div class="pricing-price">Custom</div>
+                <div class="pricing-period">Project Based</div>
+                <ul class="pricing-features">
+                    <li>✓ Full App Development</li>
+                    <li>✓ Firebase Integration</li>
+                    <li>✓ CI/CD Setup</li>
+                    <li>✓ 6 Months Support</li>
+                </ul>
+                <button class="btn-primary">Request Quote</button>
+            </div>
+
+            <div class="pricing-card fade-up">
+                <div class="pricing-title">Full-Stack Project</div>
+                <div class="pricing-price">Custom</div>
+                <div class="pricing-period">Project Based</div>
+                <ul class="pricing-features">
+                    <li>✓ Mobile + Backend</li>
+                    <li>✓ Database Design</li>
+                    <li>✓ DevOps Setup</li>
+                    <li>✓ 1 Year Support</li>
+                </ul>
+                <button class="btn-secondary">Get In Touch</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         FAQ SECTION
+         ================================================================ -->
+    <section class="section">
+        <span class="section-label fade-up">Support</span>
+        <h2 class="section-title fade-up">Frequently Asked <span class="accent">Questions</span></h2>
+
+        <div class="faq-container">
+            <div class="faq-item fade-up">
+                <div class="faq-question">
+                    <span class="faq-q-text">What is your primary technology stack?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-a-text">
+                        My primary focus is on Android development using Kotlin, Jetpack Compose, and Clean Architecture. I also have extensive experience with React, Node.js, Firebase, and cloud technologies including AWS and Azure.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <div class="faq-question">
+                    <span class="faq-q-text">How long does a typical project take?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-a-text">
+                        Project timelines vary based on scope and complexity. A simple app might take 4-8 weeks, while more complex enterprise applications could take 3-6 months. I provide detailed timeline estimates after analyzing requirements.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <div class="faq-question">
+                    <span class="faq-q-text">Do you provide maintenance and support?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-a-text">
+                        Yes! I offer comprehensive post-launch support including bug fixes, feature updates, performance optimization, and regular maintenance. Support packages range from 6 months to ongoing yearly contracts.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <div class="faq-question">
+                    <span class="faq-q-text">Can you work with remote teams?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-a-text">
+                        Absolutely! I have extensive experience working with remote teams across different time zones. I use modern collaboration tools like GitHub, Jira, Slack, and hold regular sync meetings to ensure smooth collaboration.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <div class="faq-question">
+                    <span class="faq-q-text">What's your approach to code quality?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-a-text">
+                        I follow strict quality standards: Clean Code principles, comprehensive unit testing, code reviews, automated CI/CD pipelines, and continuous monitoring. Every project includes documentation and is production-ready from day one.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <div class="faq-question">
+                    <span class="faq-q-text">Do you handle deployment and app store release?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-a-text">
+                        Yes! I manage the complete deployment pipeline including Google Play Store and Apple App Store releases. I set up automated signing, testing, and deployment using Fastlane and GitHub Actions for smooth, worry-free releases.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ================================================================
+         CONTACT SECTION
+         ================================================================ -->
+    <section class="section" id="contact">
+        <span class="section-label fade-up">Get In Touch</span>
+        <h2 class="section-title fade-up">Let's Work <span class="accent">Together</span></h2>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-block fade-up">
+                    <div class="contact-block-title">📞 Phone</div>
+                    <div class="contact-block-value">
+                        <a href="tel:+959889000889">+95 (9) 889-000-889</a><br/>
+                        <a href="tel:+959666000050">+95 (9) 666-000-050</a>
+                    </div>
+                </div>
+
+                <div class="contact-block fade-up">
+                    <div class="contact-block-title">📧 Email</div>
+                    <div class="contact-block-value">
+                        <a href="mailto:hello@moekyawaung.dev">hello@moekyawaung.dev</a>
+                    </div>
+                </div>
+
+                <div class="contact-block fade-up">
+                    <div class="contact-block-title">📍 Location</div>
+                    <div class="contact-block-value">
+                        Tachileik, Myanmar 🇲🇲<br/>
+                        Bangkok, Thailand 🇹🇭
+                    </div>
+                </div>
+
+                <div class="contact-block fade-up">
+                    <div class="contact-block-title">🌐 Connect</div>
+                    <div class="social-icons">
+                        <a href="https://github.com/Dev-moe-kyawaung" target="_blank" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://gravatar.com/moekyawaung2026" target="_blank" class="social-icon" aria-label="Gravatar">
+                            <i class="fas fa-image"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://t.me/moekyawaung" target="_blank" class="social-icon" aria-label="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="mailto:hello@moekyawaung.dev" class="social-icon" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form fade-up" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label class="form-label">Your Name *</label>
+                    <input type="text" class="form-control" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email Address *</label>
+                    <input type="email" class="form-control" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Project Type *</label>
+                    <select class="form-control" required>
+                        <option value="">Select project type...</option>
+                        <option value="mobile">Mobile App Development</option>
+                        <option value="web">Web Application</option>
+                        <option value="fullstack">Full-Stack Project</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Budget Range</label>
+                    <select class="form-control">
+                        <option value="">Select budget range...</option>
+                        <option value="5k">$5,000 - $10,000</option>
+                        <option value="10k">$10,000 - $25,000</option>
+                        <option value="25k">$25,000 - $50,000</option>
+                        <option value="50k">$50,000+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Message *</label>
+                    <textarea class="form-control" placeholder="Tell me about your project..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         FOOTER
+         ================================================================ -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-section-title">Navigation</div>
+                <a href="#home" class="footer-link">Home</a>
+                <a href="#about" class="footer-link">About</a>
+                <a href="#skills" class="footer-link">Skills</a>
+                <a href="#apps" class="footer-link">Apps</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </div>
+
+            <div>
+                <div class="footer-section-title">Resources</div>
+                <a href="https://github.com/Dev-moe-kyawaung" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://gravatar.com/moekyawaung2026" target="_blank" class="footer-link">Gravatar Profile</a>
+                <a href="#" class="footer-link">Resume/CV</a>
+                <a href="#" class="footer-link">Blog</a>
+            </div>
+
+            <div>
+                <div class="footer-section-title">Social</div>
+                <a href="https://instagram.com" target="_blank" class="footer-link">Instagram</a>
+                <a href="https://linkedin.com" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://t.me/moekyawaung" target="_blank" class="footer-link">Telegram</a>
+                <a href="https://github.com" target="_blank" class="footer-link">GitHub</a>
+            </div>
+
+            <div>
+                <div class="footer-section-title">Legal</div>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Cookie Policy</a>
+                <a href="#" class="footer-link">Disclaimer</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-credit">
+                © 2024 <a href="#home">Moe Kyaw Aung</a> | Senior Android Developer | Myanmar 🇲🇲
+            </div>
+            <div class="footer-credit">
+                Crafted with ❤️ using Kotlin, React & TypeScript | ងា်ឹមកាលដ៏មានកម្មវល័យ
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ================================================================
+         JAVASCRIPT
+         ================================================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        // ================================================================
+        // PARTICLE BACKGROUND ANIMATION
+        // ================================================================
+        function initParticles() {
+            const canvas = document.getElementById('particleCanvas');
+            if (!canvas) return;
+            
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const particleCount = 50;
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.vx = (Math.random() - 0.5) * 2;
+                    this.vy = (Math.random() - 0.5) * 2;
+                    this.radius = Math.random() * 2 + 1;
+                    this.opacity = Math.random() * 0.5 + 0.3;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+                }
+
+                draw() {
+                    ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // ================================================================
+        // THEME TOGGLE (Dark/Light Mode)
+        
+        // ================================================================
+        // THEME TOGGLE (Dark/Light Mode)
+        // ================================================================
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        // Load theme from localStorage
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        function updateThemeIcon(theme) {
+            const icon = themeToggle.querySelector('i');
+            if (theme === 'dark') {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        // ================================================================
+        // SMOOTH SCROLL ANIMATION (Fade-up on scroll)
+        // ================================================================
+        function setupFadeUpAnimation() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+
+            document.querySelectorAll('.fade-up').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // ================================================================
+        // BACK TO TOP BUTTON
+        // ================================================================
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ================================================================
+        // COUNTER ANIMATION
+        // ================================================================
+        function animateCounters() {
+            const counters = document.querySelectorAll('[data-target]');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.hasAttribute('data-animated')) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        let current = 0;
+                        const increment = target / 50;
+                        
+                        const counter = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(counter);
+                            }
+                            entry.target.textContent = Math.floor(current) + '+';
+                        }, 30);
+                        
+                        entry.target.setAttribute('data-animated', 'true');
+                    }
+                });
+            });
+
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        // ================================================================
+        // FAQ ACCORDION
+        // ================================================================
+        function setupFAQAccordion() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        }
+
+        // ================================================================
+        // FORM SUBMISSION
+        // ================================================================
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                timestamp: new Date().toISOString()
+            };
+            
+            // Show success message
+            alert('Thank you for your message! I will get back to you soon.');
+            event.target.reset();
+        }
+
+        // ================================================================
+        // PRELOADER
+        // ================================================================
+        function hidePreloader() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.classList.add('loaded');
+            }, 1500);
+        }
+
+        // ================================================================
+        // MOBILE MENU AUTO-CLOSE
+        // ================================================================
+        function setupMobileMenuClose() {
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navToggler = document.querySelector('.navbar-toggler');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggler.click();
+                });
+            });
+        }
+
+        // ================================================================
+        // INITIALIZATION
+        // ================================================================
+        document.addEventListener('DOMContentLoaded', () => {
+            initParticles();
+            setupFadeUpAnimation();
+            animateCounters();
+            setupFAQAccordion();
+            setupMobileMenuClose();
+            hidePreloader();
+        });
+
+        // Reinitialize fade-up on scroll
+        window.addEventListener('load', setupFadeUpAnimation);
+    </script>
+</body>
+</html>
