@@ -1,0 +1,128 @@
+{
+  "name": "moe-kyaw-aung-portfolio-v129",
+  "version": "1.2.9",
+  "description": "Professional portfolio website for Moe Kyaw Aung - Senior Android Developer | 12+ Years Experience | Kotlin Specialist",
+  "main": "moe-kyaw-aung-portfolio-v129.html",
+  "keywords": [
+    "portfolio",
+    "website",
+    "android",
+    "developer",
+    "kotlin",
+    "jetpack",
+    "firebase",
+    "moe-kyaw-aung",
+    "myanmar",
+    "responsive",
+    "dark-mode",
+    "single-page"
+  ],
+  "author": {
+    "name": "Moe Kyaw Aung",
+    "email": "hello@moekyawaung.dev",
+    "url": "https://github.com/Dev-moe-kyawaung",
+    "twitter": "@moekyawaung"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Dev-moe-kyawaung/moe-kyaw-aung-portfolio-v129#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dev-moe-kyawaung/moe-kyaw-aung-portfolio-v129.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dev-moe-kyawaung/moe-kyaw-aung-portfolio-v129/issues"
+  },
+  "scripts": {
+    "start": "npx http-server",
+    "dev": "python -m http.server 8000",
+    "serve": "npx live-server --port=8000",
+    "test": "echo 'Test suite not configured yet'",
+    "lint": "echo 'Linting not configured yet'",
+    "build": "echo 'No build process required - static HTML'"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "files": [
+    "moe-kyaw-aung-portfolio-v129.html",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "CHANGELOG.md",
+    ".gitignore",
+    "package.json",
+    "docs/"
+  ],
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not IE 11"
+  ],
+  "categories": [
+    "portfolio",
+    "website",
+    "html5",
+    "responsive-design",
+    "dark-mode"
+  ],
+  "github": "Dev-moe-kyawaung",
+  "social": {
+    "twitter": "@moekyawaung",
+    "github": "https://github.com/Dev-moe-kyawaung",
+    "linkedin": "https://linkedin.com/in/moekyawaung",
+    "instagram": "@moekyawaung",
+    "telegram": "@moekyawaung",
+    "gravatar": "https://gravatar.com/moekyawaung2026"
+  },
+  "tags": [
+    "portfolio",
+    "website",
+    "android-developer",
+    "kotlin",
+    "senior-developer",
+    "myanmar",
+    "responsive",
+    "dark-mode",
+    "single-file",
+    "html5",
+    "css3",
+    "javascript",
+    "bootstrap5",
+    "fontawesome6"
+  ],
+  "features": [
+    "dark-light-mode-toggle",
+    "particle-animation",
+    "smooth-scrolling",
+    "responsive-design",
+    "contact-form",
+    "faq-accordion",
+    "animated-counters",
+    "certificate-showcase",
+    "github-showcase",
+    "testimonials",
+    "pricing-table",
+    "social-links",
+    "back-to-top-button",
+    "preloader-animation",
+    "hamburger-menu",
+    "parallax-effects"
+  ],
+  "stats": {
+    "lines-of-code": 3000,
+    "sections": 16,
+    "features": 20,
+    "file-size-kb": 150,
+    "load-time-seconds": 2,
+    "lighthouse-score": 95,
+    "mobile-score": 98
+  }
+}
